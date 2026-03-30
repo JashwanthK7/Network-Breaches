@@ -1,26 +1,46 @@
-# Network Breaches Detection
+# Modelling and Predicting Cyber Hacking Breaches Using Machine Learning
 
-A machine learning project to detect network anomalies and breaches.
+## Overview
+This project focuses on applying machine learning algorithms to detect and predict network security breaches. By analyzing various transmission parameters, the system determines the likelihood of an anomaly or breach, providing a proactive approach to network security.
 
-## Project Structure
+## Features
+* **Exploratory Data Analysis**: Visualizes data relationships using Seaborn heatmaps and countplots to identify critical transmission parameters.
+* **Machine Learning Models**: Implements and compares Random Forest, XGBoost, and Logistic Regression algorithms to find the most accurate predictive model.
+* **Hyperparameter Tuning**: Uses GridSearchCV to optimize model parameters and evaluate feature importance.
+* **Graphical User Interface**: Includes a Tkinter based application that allows users to upload datasets, select specific data rows, and predict network breaches locally.
 
-* `cyber_breaches.ipynb`: The primary notebook for Exploratory Data Analysis, data preprocessing, and model training. It uses Pandas, Seaborn, Scikit-learn, and XGBoost.
-* `MP_GUI.ipynb`: A Tkinter based Graphical User Interface that loads the trained model and allows users to make predictions.
-* `breachmodel.pkl`: The serialized machine learning model.
-* `Train_data.csv` and `Test_data.csv`: The datasets used for training and testing the models.
+## Project Architecture
+The prediction system follows a distinct workflow:
+1. **Data Preprocessing**: Cleaning the dataset by handling missing values and encoding categorical variables using Label Encoding.
+2. **Model Training**: Splitting data into training and testing sets, then training the models.
+3. **Evaluation**: Comparing models based on training, testing, and cross validation scores. Random Forest is selected as the primary model.
+4. **Detection Phase**: Feeding new data through the pre-trained model via the GUI to classify network activity as Normal or Anomaly.
 
-## Requirements
+<img width="1004" height="456" alt="image" src="https://github.com/user-attachments/assets/3bca0294-4ceb-4e25-9f05-df5ecd3fa70c" />
 
-* Python 3.x
-* pandas
-* scikit-learn
-* xgboost
-* seaborn
-* matplotlib
-* tkinter
-* pandastable
+
+## Technologies Used
+* **Programming Language**: Python
+* **Libraries**: NumPy, Pandas, Scikit learn, XGBoost, Seaborn, Matplotlib
+* **GUI Framework**: Tkinter, Pandastable
+* **Environment**: Jupyter Notebook
 
 ## Usage
+1. Open and run `cyber_breaches.ipynb` to execute the data preprocessing, exploratory data analysis, and model training phases.
+2. The notebook will generate a serialized model file named `breachmodel.pkl`.
+3. Launch the graphical interface by running `MP_GUI.ipynb`.
+4. Click **Upload file** to load your testing dataset.
+5. Enter the desired row number and click **Predict Breach** to view the prediction result.
 
-1. Run `cyber_breaches.ipynb` to view the data processing and model training steps.
-2. Execute `MP_GUI.ipynb` to launch the GUI application, load the dataset, and predict anomalies using the pre-trained `breachmodel.pkl`.
+## Graphical User Interface
+
+### Breach Prediction App
+The main interface allows users to load their test data and predict whether a specific network log is a normal transaction or an anomaly.
+
+<img width="1004" height="624" alt="image" src="https://github.com/user-attachments/assets/667ce84e-e3a7-4e79-b59c-9efbbfc22e75" />
+
+
+### Data Visualization Window
+The application displays the extracted data row using a pandastable view before making the prediction.
+
+<img width="930" height="817" alt="image" src="https://github.com/user-attachments/assets/ec271362-c2fb-4be7-ba81-e9ff45c4d5c3" />
