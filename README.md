@@ -37,10 +37,9 @@ The prediction system follows a distinct workflow:
 ### Breach Prediction App
 The main interface allows users to load their test data and predict whether a specific network log is a normal transaction or an anomaly.
 
-<img width="1004" height="624" alt="image" src="https://github.com/user-attachments/assets/667ce84e-e3a7-4e79-b59c-9efbbfc22e75" />
-
+<img width="878" height="662" alt="image" src="https://github.com/user-attachments/assets/24e87b02-0add-4507-98c1-fb0fb9e197ae" />
 
 ### Data Visualization Window
 The application displays the extracted data row using a pandastable view before making the prediction.
 
-<img width="930" height="817" alt="image" src="https://github.com/user-attachments/assets/ec271362-c2fb-4be7-ba81-e9ff45c4d5c3" />
+<img width="725" height="641" alt="image" src="https://github.com/user-attachments/assets/6b29b666-7e3d-4287-977a-52f6a3434ceb" />
